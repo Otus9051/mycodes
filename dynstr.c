@@ -19,7 +19,7 @@ int main()
 //printf("Enter Serial: ");
 //scanf("%d", (ptr + i) -> sr);
 //}
-//yes this is effed up well idk so the roll is not working but i have a workaround, hah dont use it lmao
+//yes this is effed up well idk so the serial no printing is not working (segmentation fault duuuuuuuuuuuuuh) but i have a workaround, hah dont use it lmao
  for(i = 0; i < n; i++)
  {
    printf("Enter Name: ");
