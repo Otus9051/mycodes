@@ -1,5 +1,4 @@
 // Multiple Class
-import java.util.*;
 class Car // Development Class
 {
     public void speed(int maxSpeed)

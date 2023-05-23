@@ -11,11 +11,12 @@ public class Parameterized {
     }
     public static void main(String args[]) {
         int x, y;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter 1st number");
-        x = sc.nextInt();
-        System.out.println("Enter 2nd number");
-        y = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter 1st number");
+            x = sc.nextInt();
+            System.out.println("Enter 2nd number");
+            y = sc.nextInt();
+        }
         Parameterized d = new Parameterized(x,y);
         d.display();
     }

@@ -1,4 +1,3 @@
-import java.util.*;
 class StrLocChar
 {
     public static void main(String args[])

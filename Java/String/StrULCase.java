@@ -5,8 +5,9 @@ class StrULCase
     {
         String usrtxt, uctxt, lctxt;
         System.out.println("Enter a word: ");
-        Scanner sc = new Scanner(System.in);
-        usrtxt = sc.next();
+        try (Scanner sc = new Scanner(System.in)) {
+            usrtxt = sc.next();
+        }
         uctxt = usrtxt.toUpperCase();
         lctxt = usrtxt.toLowerCase();
         System.out.println("Your original word is "+usrtxt);

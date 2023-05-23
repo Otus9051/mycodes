@@ -5,10 +5,11 @@ public class AdditionOnOOPS
     private int n1, n2, sum;
     public void getData()
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter two numbers");
-        n1 = sc.nextInt();
-        n2 = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter two numbers");
+            n1 = sc.nextInt();
+            n2 = sc.nextInt();
+        }
     }
     public void add()
     {

@@ -6,8 +6,9 @@ class StrSubUsr
         String name;
         int i, j;
         System.out.println("Enter your name: ");
-        Scanner sc = new Scanner(System.in);
-        name = sc.next();
+        try (Scanner sc = new Scanner(System.in)) {
+            name = sc.next();
+        }
         for (i = 0, j = 1; i < name.length(); i++, j++)
         {
             System.out.println(name.substring(i,j));

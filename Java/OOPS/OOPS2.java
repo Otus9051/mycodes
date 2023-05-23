@@ -1,4 +1,3 @@
-import java.util.*;
 public class OOPS2
 {
     public void method1()

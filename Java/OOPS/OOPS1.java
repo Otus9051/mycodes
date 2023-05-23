@@ -1,4 +1,3 @@
-import java.util.*;
 public class OOPS1
 {
     private String fname = "John";

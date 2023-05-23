@@ -29,30 +29,31 @@ class Subtraction {
 
 public class ParamDC {
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter two numbers");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        while(true) {
-            System.out.println("Press 1 for Addition and 2 for Subtraction and 3 to exit");
-            int choice = sc.nextInt();
-            switch (choice) {
-                 case 1:
-                    Addition obj = new Addition();
-                    obj.get(a, b);
-                    obj.find_total();
-                    obj.display();
-                    break;
-                case 2:
-                    Subtraction obj1 = new Subtraction();
-                    obj1.get(a, b);
-                    obj1.find_subtract();
-                    obj1.display();
-                    break;
-                 case 3:
-                    System.exit(0);
-                default:
-                    System.out.println("Invalid Choice");
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter two numbers");
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            while(true) {
+                System.out.println("Press 1 for Addition and 2 for Subtraction and 3 to exit");
+                int choice = sc.nextInt();
+                switch (choice) {
+                     case 1:
+                        Addition obj = new Addition();
+                        obj.get(a, b);
+                        obj.find_total();
+                        obj.display();
+                        break;
+                    case 2:
+                        Subtraction obj1 = new Subtraction();
+                        obj1.get(a, b);
+                        obj1.find_subtract();
+                        obj1.display();
+                        break;
+                     case 3:
+                        System.exit(0);
+                    default:
+                        System.out.println("Invalid Choice");
+                }
             }
         }
     }

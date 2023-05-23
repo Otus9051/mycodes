@@ -6,8 +6,9 @@ class String1
         String StrPass;
         int len;
         System.out.println("Enter your password");
-        Scanner sc = new Scanner(System.in);
-        StrPass = sc.next();
+        try (Scanner sc = new Scanner(System.in)) {
+            StrPass = sc.next();
+        }
         len = StrPass.length();
         if (len >= 8)
         {

@@ -1,4 +1,3 @@
-import java.util.*;
 class StrPrVert
 {
     public static void main(String args[])

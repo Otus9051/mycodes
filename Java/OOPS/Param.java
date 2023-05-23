@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class Param {
     private int n1, n2, s;
     public void get(int ta, int tb) {
@@ -13,13 +13,14 @@ public class Param {
     }
     public static void main(String args[])
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter two numbers");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        Param obj = new Param();
-        obj.get(a, b);
-        obj.find_total();
-        obj.display();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter two numbers");
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            Param obj = new Param();
+            obj.get(a, b);
+            obj.find_total();
+            obj.display();
+        }
     }
 }

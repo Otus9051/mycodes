@@ -1,4 +1,3 @@
-import java.util.*;
 class StrSub
 {
     public static void main(String args[])
