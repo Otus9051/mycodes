@@ -3,29 +3,40 @@ import java.util.Scanner;
 public class VolumeConverter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
 
         System.out.println("Volume Converter");
         System.out.println("----------------");
-        System.out.println("1. Cubic Meters");
-        System.out.println("2. Liters");
-        System.out.println("3. Cubic Feet");
-        System.out.println("4. Gallons");
-        System.out.print("Enter the input unit (1-4): ");
-        int inputUnit = scanner.nextInt();
 
-        System.out.print("Enter the volume: ");
-        double volume = scanner.nextDouble();
+        while (!exit) {
+            System.out.println("1. Cubic Meters");
+            System.out.println("2. Liters");
+            System.out.println("3. Cubic Feet");
+            System.out.println("4. Gallons");
+            System.out.print("Enter the input unit (1-4): ");
+            int inputUnit = scanner.nextInt();
 
-        System.out.println("1. Cubic Meters");
-        System.out.println("2. Liters");
-        System.out.println("3. Cubic Feet");
-        System.out.println("4. Gallons");
-        System.out.print("Enter the output unit (1-4): ");
-        int outputUnit = scanner.nextInt();
+            System.out.print("Enter the volume: ");
+            double volume = scanner.nextDouble();
 
-        double convertedVolume = convertVolume(volume, inputUnit, outputUnit);
+            System.out.println("1. Cubic Meters");
+            System.out.println("2. Liters");
+            System.out.println("3. Cubic Feet");
+            System.out.println("4. Gallons");
+            System.out.print("Enter the output unit (1-4): ");
+            int outputUnit = scanner.nextInt();
 
-        System.out.println("The converted volume is: " + convertedVolume);
+            double convertedVolume = convertVolume(volume, inputUnit, outputUnit);
+
+            System.out.println("The converted volume is: " + convertedVolume);
+
+            System.out.println("Do you want to continue? (Y/N): ");
+            String choice = scanner.next();
+
+            if (choice.equalsIgnoreCase("N")) {
+                exit = true;
+            }
+        }
 
         scanner.close();
     }
